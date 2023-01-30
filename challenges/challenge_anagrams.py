@@ -26,7 +26,9 @@ def is_anagram(first_string, second_string):
     a = have_same_chars(first_string.lower(), second_string.lower())
     sortedString1 = sort_string(first_string.lower())
     sortedString2 = sort_string(second_string.lower())
+    if (sortedString1 == '' or sortedString2 == ''):
+        return (sortedString1, sortedString2, False)
     if (a is True):
-        return (first_string.lower(), first_string.lower(),  a)
+        return (sortedString1.lower(), sortedString2.lower(),  a)
     else:
         return (sortedString1, sortedString2, a)
